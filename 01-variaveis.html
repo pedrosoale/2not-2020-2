@@ -1,0 +1,84 @@
+<DOCTIPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modelo de documento HTML</title>
+<script>
+    //'use strict' impede que variáveia sejam declaradas
+    //sem o uso de let, var ou const
+    //Inicializar variáveis deretamente é má prática de programação
+    'use strict'
+
+    //decalarando três variáveis
+    //variáveis declaradas sem declarar o valor inicial
+    //têm o valor inicial undefined
+    let a
+    let b
+    let c
+
+    //declarando três variáveis de uma sói vez
+    let x, y, z
+
+    let v1 = 'teste' //tipo string
+    let v2 = 2.75   // tipo number
+    let v3 = true   //boolean
+    let v4 = 70     //number
+    let v5 = 'Outro teste'  //tipo string
+    let v6  //tipo undefined
+    let v7 = '356'  //tipo string
+
+    //mudando o valor de v2
+    v2 = 'batata'
+
+    //declarando várias variáveis com valor e sem valor
+    let q1 = 5, q2 = 7, q3 = '4', res 
+
+    //operadores aritméticos
+    res = q1 - q2   //subtração
+    res = q1 - q3   //subtração com conversão de string para número
+    res = q1 - v2   //falha na conversão de v2 para número porque dentro da string não há número válido
+
+    //multiplicação
+    res = q1*q2 //35
+    res = q1*q3 // 20 com conversão de q3
+    res = q1*v2 //NaN not a number
+
+    //divisão
+    res = q1/q2 //0.7142857142857143
+    res = q1/q3 //1.25, com conversão de q3
+    res = q1/v2 //NaN
+
+    //adição
+    res = q1+q2 //12
+    res = q1+q3 //'54', houve concatenação com conversão de q1 para string
+
+    res = q1+v2 //'5batata', houve concatenação
+
+    //forçando a soma de número com uma string que contém um valor numérico válido
+    res = q1 + Number(q3) //9
+
+    //usando parseInt()
+    res = q1 + parseInt(q3) //9
+
+    //potenciação
+
+    res = q1**q2 //78125
+    res = q1** q3 //625, com conversão de q3
+    res = q1 ** v2 //NaN
+
+    //operador de módulo
+    res = 5 % 2 //1 (resto da divisão)
+    res = 11 % 3 //2 (resto da divisão)
+    res = 8 % 2 //0
+
+
+    alert(res)
+
+    
+
+</script>
+</head>
+<body>
+
+</body>
