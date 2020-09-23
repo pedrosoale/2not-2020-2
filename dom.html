@@ -1,0 +1,65 @@
+<DOCTIPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento HTML</title>
+    
+</head>
+<body>
+
+    <h1>Título da página</h1>
+    <p>Isto é um parágrafo</p>
+    <ul>
+        <li id="item-x">Terceiro item</li>
+        <li>Primeiro ítem</li>
+        <li id="intruso">Intruso</li>
+        <li>segundo Ítem</li>
+    </ul>
+
+    <script>
+        /*
+            Quando o javascript é utilizado para manipular html,
+            a seção <script> deve ser posicionada na parte final do arquivo,
+            logo antes do </body>
+        */
+
+        //'use strict' impede que variáveia sejam declaradas
+        //sem o uso de let, var ou const
+        //Inicializar variáveis deretamente á má prática de programação
+        'use strict'
+
+        /*
+            DOM = document object model (Modelo de objetos do documento)
+        */
+
+        //document.querySelector: retorna o primeiro elemento de seu tipo
+        const cabec = document.querySelector('h1')
+        // Alterando o texto interno do elemento
+        cabec.innerHTML = 'Manipulando o Document Object Model (DOM)'
+       
+         /*
+            Alterando o texto do segundo ítem
+        */
+        // document.querySelectorAll: captura odos os elementos do tipo informado
+        const itens = document.querySelectorAll('li')
+
+        // Em javascript, o primeiro elemento é o de índice 0 (zero)
+        itens[1].innerHTML = 'Bertoldo'
+        
+        const itens2 = document.getElementsByTagName('li')
+        itens2[2].innerHTML = 'Jerônimo'
+
+        // Capturando um elemento por id da forma antiga
+        const elemIntruso = document.getElementById('intruso')
+        elemIntruso.innerHTML = 'SOU UM INTRUSO'
+
+        // Capturando um elemento por id da forma nova (ES5+)
+        // Para capturar por id com o querySelector(), ´preciso usar #
+        // antes do id do elemento
+        const elemX = document.querySelector('#item-x')
+        elemX.style.backgroundColor = 'yellow'       
+        
+    </script>
+
+</body>
